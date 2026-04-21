@@ -1,0 +1,304 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Shu Quan</title>
+  <meta name="author" content="Shu Quan">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Shu Quan - MS student at Peking University, researching LLM Safety and AI Alignment">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <table class="main-table">
+    <tbody>
+      <tr>
+        <td>
+
+          <!-- ===== HEADER ===== -->
+          <table class="header-table">
+            <tbody>
+              <tr>
+                <td class="bio-col">
+                  <p class="name">Shu Quan</p>
+                  <p>
+                    I am a Master's student at
+                    <a href="https://www.pku.edu.cn/">Peking University</a>,
+                    working with Prof. <a href="https://scholar.google.com/citations?user=qMPHHoIAAAAJ">Yaodong Yang</a>
+                    at the <a href="https://www.alignment.pku.edu.cn/">PKU-Alignment</a> group,
+                    Institute for Artificial Intelligence. I also visited
+                    <a href="https://www.hkust-gz.edu.cn/">HKUST(GZ)</a> NLP-LAB,
+                    advised by Prof. <a href="https://scholar.google.com/citations?user=Xuming_Hu">Xuming Hu</a>.
+                  </p>
+                  <p>
+                    I work on AI safety, with a focus on <strong>safety evaluation</strong> and
+                    <strong>red-teaming</strong> of large language models and autonomous agents.
+                    My recent work studies <em>evaluation blind spots</em> — settings where
+                    standard behavioral benchmarks fail to surface harmful behaviors that emerge
+                    in out-of-distribution or system-level interactions.
+                  </p>
+                  <p class="links">
+                    <a href="mailto:quanshu@stu.pku.edu.cn">Email</a> &nbsp;/&nbsp;
+                    <a href="data/CV.pdf">CV</a> &nbsp;/&nbsp;
+                    <a href="https://github.com/Quanshu01">GitHub</a> &nbsp;/&nbsp;
+                    <a href="https://scholar.google.com/citations?user=bJSnVCkAAAAJ&hl=en">Google Scholar</a>
+                  </p>
+                </td>
+                <td class="photo-col">
+                  <img src="images/profile.jpg" alt="Shu Quan" class="profile-photo">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- ===== NEWS ===== -->
+          <section>
+            <h2>News</h2>
+            <table class="news-table">
+              <tr>
+                <td class="news-date">Apr 2026</td>
+                <td>Paper on LLM biosafety evaluation (SPIKE-Bench) submitted to <strong>COLM 2026</strong> — under review.</td>
+              </tr>
+              <tr>
+                <td class="news-date">Mar 2026</td>
+                <td>Paper on CUA system safety (OS-Monitor / SafeCUA) submitted to <strong>ICML 2026</strong> — under review.</td>
+              </tr>
+              <tr>
+                <td class="news-date">Sep 2025</td>
+                <td>Paper on multi-agent scientific literature extraction published in <strong>npj Computational Materials</strong> (SCI Q1).</td>
+              </tr>
+              <tr>
+                <td class="news-date">Jun 2025</td>
+                <td>Joined OPPO AI Center as a research intern on LLM Agent development.</td>
+              </tr>
+              <tr>
+                <td class="news-date">Sep 2024</td>
+                <td>Started MS at Peking University, joining PKU-Alignment group.</td>
+              </tr>
+              <tr>
+                <td class="news-date">Jun 2024</td>
+                <td>Graduated from Henan University with Honors — Rank 1/46, Henan Province Outstanding Graduate.</td>
+              </tr>
+            </table>
+          </section>
+
+          <!-- ===== PUBLICATIONS ===== -->
+          <section>
+            <h2>Publications</h2>
+
+            <!-- Paper 1 -->
+            <table class="pub-table">
+              <tbody>
+                <tr>
+                  <td class="pub-img-col">
+                    <img src="images/spike_bench.png" alt="SPIKE-Bench" class="pub-img">
+                  </td>
+                  <td class="pub-text-col">
+                    <p class="pub-title">
+                      A Blind Spot in Alignment: Quantifying Biosecurity Risks in Large Language Models
+                    </p>
+                    <p class="pub-authors">
+                      <strong>Shu Quan</strong>, Tianfang Hao, Sitong Fang, He Geng, Jiayi Zhou, Boyuan Chen, Kaile Wang, Donghai Hong, Juntao Dai, Yaodong Yang, Jiaming Ji
+                    </p>
+                    <p class="pub-venue">
+                      <em>COLM 2026</em> &nbsp;(under review)
+                    </p>
+                    <p class="pub-desc">
+                      Current LLM safety benchmarks operate on natural language and cannot determine whether a
+                      model-generated amino acid sequence is biological gibberish or a credible threat — an
+                      <em>evaluation blind spot</em>. We introduce <strong>SPIKE-Bench</strong> (Sequence-level
+                      ProtEIn RisK Evaluation Benchmark), coupling 631 curated toxin-design prompts across 7
+                      functional categories with the SPIKE funnel: a 3-stage protocol filtering outputs through
+                      compliance, biological plausibility, and predicted toxicity to produce the
+                      <em>Functional Harmfulness Rate</em> (FHR). An audit of 32 LLMs reveals that most models
+                      freely comply with toxin-design requests and FHR reaches up to 50.7%, driven by
+                      bio-generative capability rather than safety alignment. We also release
+                      <strong>BioSafe-Guard</strong>, a domain-specialized classifier achieving 98.9% detection
+                      with only 0.3% false positive rate.
+                    </p>
+                    <p class="pub-links">
+                      <a href="https://anonymous.4open.science/r/SPIKE-Bench">paper</a> &nbsp;/&nbsp;
+                      <a href="https://anonymous.4open.science/r/SPIKE-Bench">code</a>
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- Paper 2 -->
+            <table class="pub-table">
+              <tbody>
+                <tr>
+                  <td class="pub-img-col">
+                    <img src="images/os_monitor.png" alt="SafeCUA" class="pub-img">
+                  </td>
+                  <td class="pub-text-col">
+                    <p class="pub-title">
+                      SafeCUA: Exploring System-Centric Risks in Computer-Using Agents via Augmented Observability
+                    </p>
+                    <p class="pub-authors">
+                      Donghai Hong, Changhao Ju, <strong>Shu Quan</strong>, Yuyang Ren, Boyuan Chen, Jiayi Zhou, Kaile Wang, Juntao Dai, Yaodong Yang, Jiaming Ji
+                    </p>
+                    <p class="pub-venue">
+                      <em>ICML 2026</em> &nbsp;(under review)
+                    </p>
+                    <p class="pub-desc">
+                      Existing CUA safety research focuses on trajectory-level evaluation (terminal output,
+                      screenshots), overlooking the security state of the underlying OS — leading to
+                      systematic false negatives. We model CUAs as constrained POMDPs and propose
+                      <strong>OS-Monitor</strong>, the first plug-and-play kernel-level detection toolkit
+                      with 27 automated detectors covering 7 system-centric risk categories (privilege misuse,
+                      security control bypass, data exfiltration, etc.). We introduce the
+                      <strong>SafeCUA</strong> benchmark (314 Linux CLI tasks, 13 scenarios) and discover the
+                      <em>broken windows effect</em>: an initial system violation increases subsequent harmful
+                      actions by 21.43%. Integrating OS-Monitor as an inference constraint via tree search
+                      improves average safety by 14.77%.
+                    </p>
+                    <p class="pub-links">
+                      <a href="https://anonymous.4open.science/r/SafeCUA-01E9">paper</a> &nbsp;/&nbsp;
+                      <a href="https://anonymous.4open.science/r/SafeCUA-01E9">code</a>
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- Paper 3 -->
+            <table class="pub-table">
+              <tbody>
+                <tr>
+                  <td class="pub-img-col">
+                    <img src="images/multi_agent.png" alt="SLM-MATRIX" class="pub-img">
+                  </td>
+                  <td class="pub-text-col">
+                    <p class="pub-title">
+                      SLM-MATRIX: A Multi-Agent Trajectory Reasoning and Verification Framework for Enhancing Language Models in Materials Data Extraction
+                    </p>
+                    <p class="pub-authors">
+                      Xin Li*, Zhixuan Huang*, <strong>Shu Quan</strong>, Cheng Peng, Xiaoming Ma
+                    </p>
+                    <p class="pub-venue">
+                      <em>npj Computational Materials</em> &nbsp;(SCI Q1, 2025) &nbsp;·&nbsp;
+                      <!-- <a href="https://doi.org/10.1038/s41524-025-01719-x">DOI</a> -->
+                    </p>
+                    <p class="pub-desc">
+                      We present <strong>SLM-MATRIX</strong>, a multi-path collaborative reasoning and
+                      verification framework based on small language models (SLMs) for extracting material
+                      names, numerical values, and physical units from scientific literature without
+                      model fine-tuning. The framework integrates three complementary reasoning paths:
+                      a Mixture-of-Agents (MoA) collaborative path, a generator–discriminator path enhanced
+                      by Monte Carlo Tree Search, and a dual cross-verification path. SLM-MATRIX achieves
+                      92.85% accuracy on the BulkModulus dataset and 77.68% on MatSynTriplet, outperforming
+                      conventional methods and single-path models.
+                    </p>
+                    <p class="pub-links">
+                      <a href="https://doi.org/10.1038/s41524-025-01719-x">paper</a>
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- Paper 4 -->
+            <table class="pub-table">
+              <tbody>
+                <tr>
+                  <td class="pub-img-col">
+                    <img src="images/blue_green.png" alt="Blue-Green Space" class="pub-img">
+                  </td>
+                  <td class="pub-text-col">
+                    <p class="pub-title">
+                      Nonlinear Effects of Blue-Green Space Variables on Urban Cold Islands in Zhengzhou Analyzed with Random Forest Regression
+                    </p>
+                    <p class="pub-authors">
+                      <strong>Shu Quan</strong>*, Maojuan Li, Tianqi Li, Haodong Liu, Yaohui Cui, Miaohan Liu
+                    </p>
+                    <p class="pub-venue">
+                      <em>Frontiers in Ecology and Evolution</em> &nbsp;(SCI Q2, Aug 2023) &nbsp;·&nbsp;
+                      <!-- <a href="https://doi.org/10.3389/fevo.2023.1185249">DOI</a> -->
+                    </p>
+                    <p class="pub-desc">
+                      We analyze the nonlinear relationship between blue-green space variables and urban cold
+                      island (UCI) effects in Zhengzhou City using random forest regression on remote sensing
+                      data. Blue-green spaces were on average 2°C cooler than built-up areas; blue space
+                      proportion, area, and vegetation cover were the three primary variables determining land
+                      surface temperature. We find threshold effects — at 140 m width blue-green spaces cause
+                      a park cooling intensity peak, and a vegetation coverage of 56% marks the lower threshold
+                      for both LST reduction and cooling intensity improvement — revealing design thresholds
+                      that can inform urban planning.
+                    </p>
+                    <p class="pub-links">
+                      <a href="https://doi.org/10.3389/fevo.2023.1185249">paper</a>
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <!-- ===== EXPERIENCE ===== -->
+          <section>
+            <h2>Experience</h2>
+            <table class="exp-table">
+              <tr>
+                <td class="exp-logo">
+                  <img src="images/oppo.png" alt="OPPO" class="logo-img">
+                </td>
+                <td>
+                  <p><strong>OPPO AI Center, Large Model Algorithm Dept.</strong> &nbsp;·&nbsp; Research Intern</p>
+                  <p class="exp-date">Jun 2025 – Oct 2025</p>
+                  <p>Worked on DeepResearch, a multi-agent automated research system. Built a Citation Agent for cross-source verification and a Code-Execution Agent for numerical validation. Refactored the system with LangGraph, moving from async-callback orchestration to a declarative state-graph with node-based agents. Long-text factual accuracy improved from 60% to 78.5%.</p>
+                </td>
+              </tr>
+              <tr>
+                <td class="exp-logo">
+                  <img src="images/iflytek.png" alt="iFlytek" class="logo-img">
+                </td>
+                <td>
+                  <p><strong>iFlytek, South-China Research Institute</strong> &nbsp;·&nbsp; Research Intern</p>
+                  <p class="exp-date">Feb 2025 – May 2025</p>
+                  <p>Built a quality-inspection pipeline for medical LLM training data, combining knowledge retrieval against authoritative databases, a 5-dimension output-evaluation rubric, and multi-step CoT verification. Supervised QC of 370k medical dialogues used to fine-tune a 13B medical LLM; error-detection precision improved from 65.5% to 82.6%.</p>
+                </td>
+              </tr>
+            </table>
+          </section>
+
+          <!-- ===== EDUCATION ===== -->
+          <section>
+            <h2>Education</h2>
+            <table class="exp-table">
+              <tr>
+                <td class="exp-logo">
+                  <img src="images/pku.png" alt="PKU" class="logo-img">
+                </td>
+                <td>
+                  <p><strong>Peking University</strong> &nbsp;·&nbsp; M.S. Environmental Science</p>
+                  <p class="exp-date">Sep 2024 – Jun 2027 (expected) &nbsp;·&nbsp; GPA: 3.61/4</p>
+                  <p>Research: LLM Safety &amp; AI Alignment, PKU-Alignment Group<br>
+                  Advisor: Prof. Yaodong Yang</p>
+                </td>
+              </tr>
+              <tr>
+                <td class="exp-logo">
+                  <img src="images/henu.png" alt="Henan University" class="logo-img">
+                </td>
+                <td>
+                  <p><strong>Henan University</strong> &nbsp;·&nbsp; B.S. Geographic Information Science</p>
+                  <p class="exp-date">Sep 2020 – Jun 2024 &nbsp;·&nbsp; GPA: 3.68/4 &nbsp;·&nbsp; Rank 1/46 (Top 2%)</p>
+                  <p>National Scholarship (2023); Henan Province Outstanding Graduate (2024)</p>
+                </td>
+              </tr>
+            </table>
+          </section>
+
+          <!-- ===== FOOTER ===== -->
+          <footer>
+            <p>© 2026 Shu Quan &nbsp;·&nbsp; Template inspired by <a href="https://jonbarron.info/">Jon Barron</a></p>
+          </footer>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

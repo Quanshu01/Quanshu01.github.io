@@ -1,0 +1,230 @@
+/* ===== RESET & BASE ===== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+  color: #333;
+  background: #fff;
+}
+
+a { color: #1a6bb0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+p { margin-bottom: 0.6em; text-align: justify; }
+
+/* ===== MAIN LAYOUT ===== */
+.main-table {
+  width: 100%;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 20px 20px 40px;
+  border-spacing: 0;
+}
+
+/* ===== HEADER ===== */
+.header-table {
+  width: 100%;
+  border-spacing: 0;
+  margin-bottom: 36px;
+}
+
+.bio-col {
+  vertical-align: middle;
+  padding-right: 32px;
+}
+
+.photo-col {
+  vertical-align: middle;
+  width: 180px;
+  text-align: center;
+}
+
+.name, .links, .pub-title, .pub-authors, .pub-venue, .pub-links, .exp-date, .news-date {
+  text-align: left;
+}
+
+.name {
+  font-size: 2em;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: #111;
+}
+
+.links {
+  margin-top: 8px;
+  font-size: 0.97em;
+}
+
+.profile-photo {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #e8e8e8;
+  display: block;
+  margin: 0 auto;
+  background: #f0f0f0;
+}
+
+/* ===== SECTIONS ===== */
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  font-size: 1.3em;
+  font-weight: 700;
+  color: #111;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 6px;
+  margin-bottom: 18px;
+}
+
+/* ===== NEWS ===== */
+.news-table {
+  width: 100%;
+  border-spacing: 0 6px;
+}
+
+.news-table tr td {
+  padding: 3px 0;
+  vertical-align: top;
+}
+
+.news-date {
+  white-space: nowrap;
+  color: #888;
+  font-size: 0.88em;
+  width: 80px;
+  padding-right: 14px;
+}
+
+/* ===== PUBLICATIONS ===== */
+.pub-table {
+  width: 100%;
+  border-spacing: 0;
+  margin-bottom: 28px;
+}
+
+.pub-img-col {
+  width: 160px;
+  vertical-align: top;
+  padding-right: 20px;
+}
+
+.pub-img {
+  width: 150px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 6px;
+  background: #f0f4f8;
+  border: 1px solid #e0e0e0;
+  display: block;
+}
+
+.pub-text-col {
+  vertical-align: top;
+}
+
+.pub-title {
+  font-weight: 700;
+  color: #111;
+  font-size: 0.98em;
+  margin-bottom: 4px;
+}
+
+.pub-authors {
+  font-size: 0.9em;
+  color: #555;
+  margin-bottom: 3px;
+}
+
+.pub-venue {
+  font-size: 0.9em;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.pub-desc {
+  font-size: 0.88em;
+  color: #444;
+  margin-bottom: 5px;
+}
+
+.pub-links {
+  font-size: 0.88em;
+}
+
+/* ===== EXPERIENCE & EDUCATION ===== */
+.exp-table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: separate;
+}
+
+.exp-table tr {
+  vertical-align: top;
+}
+
+.exp-table tr td {
+  padding-bottom: 22px;
+  vertical-align: top;
+}
+
+.exp-logo {
+  width: 70px;
+  padding-right: 16px;
+  text-align: center;
+}
+
+.logo-img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  background: #f8f8f8;
+  border-radius: 6px;
+  border: 1px solid #eee;
+  display: block;
+  margin: 4px auto 0;
+}
+
+.exp-date {
+  font-size: 0.88em;
+  color: #888;
+  margin-bottom: 4px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  font-size: 0.82em;
+  color: #aaa;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+  .header-table, .header-table tbody, .header-table tr {
+    display: block;
+  }
+  .photo-col {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .bio-col {
+    display: block;
+    padding-right: 0;
+  }
+  .pub-img-col {
+    display: none;
+  }
+  .exp-logo {
+    display: none;
+  }
+}
