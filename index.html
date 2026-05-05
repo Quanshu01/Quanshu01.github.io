@@ -32,15 +32,16 @@
                     advised by Prof. <a href="https://scholar.google.com/citations?hl=zh-CN&user=dbBKbXoAAAAJ&view_op=list_works&sortby=pubdate">Xuming Hu</a>.
                   </p>
                   <p>
-                    I work on <strong>AI safety</strong>, with a focus on <strong>safety evaluation</strong> and
-                    <strong>red-teaming</strong> of large language models and autonomous agents.
-                    My recent work studies <em>evaluation blind spots</em> — settings where
-                    standard behavioral benchmarks fail to surface harmful behaviors that emerge
-                    in out-of-distribution or system-level interactions.
+                    I work on <strong>AI safety evaluation</strong> and <strong>LLM alignment</strong>,
+                    with a focus on <em>evaluation blind spots</em> — settings where standard
+                    behavioral benchmarks fail to surface harmful behaviors that emerge in
+                    out-of-distribution or system-level interactions. My goal is to develop
+                    evaluation frameworks and alignment methods that measure what actually matters
+                    for real-world safety.
                   </p>
                   <p class="links">
                     <a href="mailto:quanshu@stu.pku.edu.cn">Email</a> &nbsp;/&nbsp;
-                    <a href="data/CV.pdf">CV</a> &nbsp;/&nbsp;
+                    <a href="data/CV_Shu_Quan.pdf">CV</a> &nbsp;/&nbsp;
                     <a href="https://github.com/Quanshu01">GitHub</a> &nbsp;/&nbsp;
                     <a href="https://scholar.google.com/citations?user=bJSnVCkAAAAJ&hl=en">Google Scholar</a>
                   </p>
@@ -62,7 +63,7 @@
               </tr>
               <tr>
                 <td class="news-date">Mar 2026</td>
-                <td>Paper on CUA system safety (OS-Monitor / SafeCUA) submitted to <strong>ICML 2026</strong> — under review.</td>
+                <td>Paper on CLI agent safety (OS-Monitor / SafeCLI) submitted to <strong>NeurIPS 2026</strong> Evaluations &amp; Datasets Track — under review.</td>
               </tr>
               <tr>
                 <td class="news-date">Sep 2025</td>
@@ -70,7 +71,7 @@
               </tr>
               <tr>
                 <td class="news-date">Jun 2025</td>
-                <td>Joined OPPO AI Center as a research intern on LLM Agent development.</td>
+                <td>Joined OPPO AI Center as a research intern working on long-form report generation and factuality evaluation.</td>
               </tr>
               <tr>
                 <td class="news-date">Sep 2024</td>
@@ -131,33 +132,33 @@
               <tbody>
                 <tr>
                   <td class="pub-img-col">
-                    <img src="images/os_monitor.png" alt="SafeCUA" class="pub-img">
+                    <img src="images/os_monitor.png" alt="SafeCLI" class="pub-img">
                   </td>
                   <td class="pub-text-col">
                     <p class="pub-title">
-                      SafeCUA: Exploring System-Centric Risks in Computer-Using Agents via Augmented Observability
+                      SafeCLI: Exploring System-Centric Risks in CLI Agents via Augmented Observability
                     </p>
                     <p class="pub-authors">
                       Donghai Hong, Changhao Ju, <strong>Shu Quan</strong>, Yuyang Ren, Boyuan Chen, Jiayi Zhou, Kaile Wang, Juntao Dai, Yaodong Yang, Jiaming Ji
                     </p>
                     <p class="pub-venue">
-                      <em>ICML 2026</em> &nbsp;(under review)
+                      <em>NeurIPS 2026 Evaluations &amp; Datasets Track</em> &nbsp;(under review)
                     </p>
                     <p class="pub-desc">
-                      Existing CUA safety research focuses on trajectory-level evaluation (terminal output,
+                      Existing CLI agent safety research focuses on trajectory-level evaluation (terminal output,
                       screenshots), overlooking the security state of the underlying OS — leading to
-                      systematic false negatives. We model CUAs as constrained POMDPs and propose
+                      systematic false negatives. We model CLI agents as constrained POMDPs and propose
                       <strong>OS-Monitor</strong>, the first plug-and-play kernel-level detection toolkit
-                      with 27 automated detectors covering 7 system-centric risk categories (privilege misuse,
+                      with 28 automated detectors covering 7 system-centric risk categories (privilege misuse,
                       security control bypass, data exfiltration, etc.). We introduce the
-                      <strong>SafeCUA</strong> benchmark (314 Linux CLI tasks, 13 scenarios) and discover the
+                      <strong>SafeCLI</strong> benchmark (314 Linux CLI tasks, 13 scenarios) and discover the
                       <em>broken windows effect</em>: an initial system violation increases subsequent harmful
                       actions by 21.43%. Integrating OS-Monitor as an inference constraint via tree search
                       improves average safety by 14.77%.
                     </p>
                     <p class="pub-links">
-                      <a href="https://anonymous.4open.science/r/SafeCUA-01E9">paper</a> &nbsp;/&nbsp;
-                      <a href="https://anonymous.4open.science/r/SafeCUA-01E9">code</a>
+                      <a href="https://anonymous.4open.science/r/SafeCLI-13DD">paper</a> &nbsp;/&nbsp;
+                      <a href="https://anonymous.4open.science/r/SafeCLI-13DD">code</a>
                     </p>
                   </td>
                 </tr>
@@ -248,7 +249,7 @@
                 <td>
                   <p><strong>OPPO AI Center, Large Model Algorithm Dept.</strong> &nbsp;·&nbsp; Research Intern</p>
                   <p class="exp-date">Jun 2025 – Oct 2025</p>
-                  <p>Worked on DeepResearch, a multi-agent automated research system. Built a Citation Agent for cross-source verification and a Code-Execution Agent for numerical validation. Refactored the system with LangGraph, moving from async-callback orchestration to a declarative state-graph with node-based agents. Long-text factual accuracy improved from 60% to 78.5%.</p>
+                  <p>Studied planning degradation and factual hallucination in DeepResearch long-form report generation. Redesigned the outline-generation pipeline into a multi-step intent-decomposition, reflection, and verification chain; ran controlled experiments across model backbones and sampling strategies to identify failure modes. Designed a factuality evaluation protocol (numerical claims, citation accuracy, contextual consistency) producing case-level supervision signals. Planning satisfaction improved by 5%; long-text factual accuracy improved from 60% to 78.5%.</p>
                 </td>
               </tr>
               <tr>
@@ -268,7 +269,7 @@
                 <td>
                   <p><strong>iFlytek, South-China Research Institute</strong> &nbsp;·&nbsp; Research Intern</p>
                   <p class="exp-date">Feb 2025 – May 2025</p>
-                  <p>Built a quality-inspection pipeline for medical LLM training data, combining knowledge retrieval against authoritative databases, a 5-dimension output-evaluation rubric, and multi-step CoT verification. Supervised QC of 370k medical dialogues used to fine-tune a 13B medical LLM; error-detection precision improved from 65.5% to 82.6%.</p>
+                  <p>Designed fine-grained alignment algorithms for a 13B medical LLM: a tripartite rubric schema (main proficiency · excellence bonus · safety veto) with a lexicographic preference protocol enforcing safety as a hard constraint, and an Explicit Criteria Injection paradigm that trains a criteria-conditioned reward model to steer GRPO. Overall accuracy improved 22.3% and safety compliance 21.7% on expert-adjudicated benchmarks.</p>
                 </td>
               </tr>
             </table>
