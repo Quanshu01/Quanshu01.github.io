@@ -66,10 +66,6 @@
                 <td>Joining Tencent IEG as a research intern on game agents.</td>
               </tr>
               <tr>
-                <td class="news-date">Jun 2026</td>
-                <td>Preprint on physics-aware video VAE via world-model alignment is under review.</td>
-              </tr>
-              <tr>
                 <td class="news-date">May 2026</td>
                 <td>Preprint on medical knowledge updating (SEER-Bench) is under review.</td>
               </tr>
@@ -111,53 +107,9 @@
           <!-- ===== PUBLICATIONS ===== -->
           <section>
             <h2>Publications</h2>
-            <p style="margin-top:-0.4em; color:#666; font-size:0.92em;">
+            <p class="pub-note-line">
               <em>* indicates equal contribution.</em>
-              My work spans four threads: <strong>physical-world reasoning</strong>,
-              <strong>medical knowledge &amp; alignment</strong>,
-              <strong>agent &amp; system reliability</strong>, and
-              <strong>environmental / scientific data modeling</strong>.
             </p>
-
-            <!-- ===== Thread 1: Physical-world reasoning & world models ===== -->
-            <h3 style="margin-top:1.2em;">Physical-world reasoning &amp; world models</h3>
-
-            <!-- Physics-aware Video VAE -->
-            <table class="pub-table">
-              <tbody>
-                <tr>
-                  <td class="pub-img-col">
-                    <img src="images/physics_vae.png" alt="Physics-Aware Video VAE" class="pub-img"
-                         onerror="this.style.visibility='hidden'">
-                  </td>
-                  <td class="pub-text-col">
-                    <p class="pub-title">
-                      Physics-Aware Video VAE via World-Model Alignment
-                    </p>
-                    <p class="pub-authors">
-                      <strong>Author role:</strong> Co-first author (listed first)
-                    </p>
-                    <p class="pub-venue">
-                      <em>under review</em>
-                    </p>
-                    <p class="pub-desc">
-                      Modern video VAEs reconstruct well, yet their latents are not naturally
-                      organized to support physical reasoning — a probing-blind spot in current
-                      world-model stacks. We use a frozen video world model (V-JEPA2) as a
-                      <em>physical prior</em> and align Wan VAE encoder latents to its
-                      spatiotemporal token space through a learnable projector and a hierarchical
-                      VF loss (token-level cosine, token–token geometry, temporal dynamics), with
-                      adaptive weighting that prevents representation collapse. On Physion and
-                      Physion++, the aligned latent improves linear physical readout
-                      (+12% relative) and OOD physical-property probing (+8%) while preserving
-                      reconstruction quality (PSNR drop &lt; 0.3 dB). The work also exposes a
-                      non-monotonic relation between teacher-token similarity and physical
-                      readability — informing how alignment objectives should be chosen.
-                    </p>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
 
             <!-- ===== Thread 2: Medical knowledge & alignment ===== -->
             <h3 style="margin-top:1.4em;">Medical knowledge &amp; LLM alignment</h3>
@@ -172,28 +124,22 @@
                   </td>
                   <td class="pub-text-col">
                     <p class="pub-title">
-                      Dense Clinical Contrasts Enhance Medical Knowledge Updating in Large Language Models
+                      <a href="https://openreview.net/forum?id=ZT0NIzuZYL">Dense Clinical Contrasts Enhance Medical Knowledge Updating in Large Language Models</a>
                     </p>
                     <p class="pub-authors">
-                      <strong>Author role:</strong> Co-first author (listed second)
+                      Yangmin Huang*, <strong>Shu Quan*</strong>, He Geng, Xin Ye, Qianyun Du,
+                      Zhiyang He, Jiaxue Hu, Xiaodong Tao
                     </p>
                     <p class="pub-venue">
-                      <em>under review</em>
+                      under review &nbsp;·&nbsp; Co-first author (listed second)
                     </p>
                     <p class="pub-desc">
-                      Medical knowledge changes continually, leaving LLMs reliant on outdated yet
-                      clinically plausible facts. We ask not <em>can</em> a model update its
-                      medical knowledge but <em>how should the update be structured</em> as
-                      supervision so that it transfers and retains. We introduce
-                      <strong>SEER-Bench</strong>, a temporally anchored oncology-staging
-                      benchmark curated from the latest SEER Research Data release, and render
-                      identical NCCN guideline updates into four supervision formats — SAQ, FITB,
-                      MSQ, and the networked many-to-many <strong>EMQ</strong>. Under a
-                      same-budget protocol, EMQ yields the strongest external transfer and
-                      retention: a Qwen3-4B trained on EMQ updates reaches 64.8% on temporally
-                      anchored staging, outperforming four of seven external reference systems.
-                      Diagnostic analyses link EMQ’s advantage to denser clinical-contrast
-                      signals and more economical representational change.
+                      We introduce <strong>SEER-Bench</strong>, a temporally anchored
+                      oncology-staging benchmark, and study how updated clinical knowledge should
+                      be structured as supervision. Under the same update budget, many-to-many
+                      <strong>EMQ</strong> supervision gives the strongest transfer and retention;
+                      Qwen3-4B reaches 64.8% on temporally anchored staging and outperforms four
+                      of seven external reference systems.
                     </p>
                   </td>
                 </tr>
@@ -215,28 +161,23 @@
                       A Blind Spot in Alignment: Quantifying Biosecurity Risks in Large Language Models
                     </p>
                     <p class="pub-authors">
-                      <strong>Author role:</strong> Co-first author (listed first)
+                      <strong>Shu Quan*</strong>, Tianfang Hao*, Sitong Fang, He Geng, Jiayi Zhou,
+                      Boyuan Chen, Kaile Wang, Donghai Hong, Juntao Dai, Yaodong Yang, Jiaming Ji
                     </p>
                     <p class="pub-venue">
-                      <em>under review</em>
-                    </p>
-                    <p class="pub-desc">
-                      Standard LLM safety benchmarks operate on natural language and cannot tell
-                      whether a model-generated amino-acid sequence is biological gibberish or a
-                      credible threat — an <em>evaluation blind spot</em>. We introduce
-                      <strong>SPIKE-Bench</strong> (Sequence-level ProtEIn RisK Evaluation
-                      Benchmark): 631 curated toxin-design prompts across 7 functional categories,
-                      coupled with a 3-stage SPIKE funnel that filters outputs through compliance,
-                      biological plausibility (ESM-2 / ESMFold), and predicted toxicity to produce
-                      the <em>Functional Harmfulness Rate</em> (FHR). An audit of 32 LLMs shows
-                      FHR up to 50.7%, with near-zero correlation between refusal rate and
-                      functional risk (ρ = −0.05). We further release
-                      <strong>BioSafe-Guard</strong>, a domain-specialized classifier reaching
-                      98.9% detection at 0.3% FPR.
+                      under review &nbsp;·&nbsp; Co-first author (listed first, lead)
                     </p>
                     <p class="pub-links">
                       <a href="https://anonymous.4open.science/r/SPIKE-Bench">paper</a> &nbsp;/&nbsp;
                       <a href="https://anonymous.4open.science/r/SPIKE-Bench">code</a>
+                    </p>
+                    <p class="pub-desc">
+                      We introduce <strong>SPIKE-Bench</strong>, a sequence-level biosecurity
+                      benchmark with 631 toxin-design prompts and a 3-stage evaluation funnel that
+                      measures compliance, biological plausibility, and predicted toxicity. Across
+                      32 LLMs, functional harmfulness reaches 50.7% and is nearly uncorrelated
+                      with refusal rate; we also release <strong>BioSafe-Guard</strong>, reaching
+                      98.9% detection at 0.3% FPR.
                     </p>
                   </td>
                 </tr>
@@ -255,29 +196,22 @@
                       SafeCLI: Exploring System-Centric Risks in CLI Agents via Augmented Observability
                     </p>
                     <p class="pub-authors">
-                      <strong>Author role:</strong> Co-author
+                      Donghai Hong, Changhao Ju, <strong>Shu Quan</strong>, Yuyang Ren, Boyuan
+                      Chen, Jiayi Zhou, Kaile Wang, Juntao Dai, Yaodong Yang, Jiaming Ji
                     </p>
                     <p class="pub-venue">
-                      <em>under review</em>
-                    </p>
-                    <p class="pub-desc">
-                      Existing CLI-agent safety research evaluates trajectory-level signals
-                      (terminal output, screenshots) and overlooks the security state of the
-                      underlying OS — producing systematic false negatives. We model CLI agents
-                      as constrained POMDPs and propose <strong>OS-Monitor</strong>, the first
-                      plug-and-play kernel-level detection toolkit (28 detectors across 7
-                      system-centric risk categories: privilege misuse, security-control bypass,
-                      data exfiltration, …). On the <strong>SafeCLI</strong> benchmark
-                      (314 Linux CLI tasks, 13 scenarios) we find that <strong>74%</strong> of
-                      system-level harms produce no visible signal in terminal output, and an
-                      initial system violation increases subsequent harmful actions by
-                      <strong>21.43%</strong> (a <em>broken-windows effect</em>). Integrating
-                      OS-Monitor as an inference-time constraint via tree search improves average
-                      safety by 14.77%.
+                      under review &nbsp;·&nbsp; Co-author
                     </p>
                     <p class="pub-links">
                       <a href="https://anonymous.4open.science/r/SafeCLI-13DD">paper</a> &nbsp;/&nbsp;
                       <a href="https://anonymous.4open.science/r/SafeCLI-13DD">code</a>
+                    </p>
+                    <p class="pub-desc">
+                      We propose <strong>OS-Monitor</strong>, a kernel-level plug-and-play
+                      detection toolkit with 28 detectors across 7 system-risk categories, and
+                      evaluate it on 314 Linux CLI tasks. We find that 74% of system-level harms
+                      produce no visible terminal signal; using OS-Monitor as an inference-time
+                      constraint improves average safety by 14.77%.
                     </p>
                   </td>
                 </tr>
@@ -296,23 +230,20 @@
                       SLM-MATRIX: A Multi-Agent Trajectory Reasoning and Verification Framework for Enhancing Language Models in Materials Data Extraction
                     </p>
                     <p class="pub-authors">
-                      <strong>Author role:</strong> Co-author
+                      Xin Li*, Zhixuan Huang*, <strong>Shu Quan</strong>, Cheng Peng, Xiaoming Ma
                     </p>
                     <p class="pub-venue">
-                      <em>npj Computational Materials</em> &nbsp;(SCI Q1, 2025)
-                    </p>
-                    <p class="pub-desc">
-                      <strong>SLM-MATRIX</strong> is a multi-path collaborative reasoning and
-                      verification framework based on small language models (SLMs) for extracting
-                      material names, numerical values, and physical units from scientific
-                      literature without model fine-tuning. The framework integrates three
-                      reasoning paths — a Mixture-of-Agents (MoA) collaborative path, a
-                      generator–discriminator path enhanced by Monte-Carlo Tree Search, and a
-                      dual cross-verification path — and reaches 92.85% accuracy on BulkModulus
-                      and 77.68% on MatSynTriplet, outperforming single-path baselines.
+                      <em>npj Computational Materials</em>, 2025 &nbsp;·&nbsp; SCI Q1 &nbsp;·&nbsp; Co-author
                     </p>
                     <p class="pub-links">
                       <a href="https://doi.org/10.1038/s41524-025-01719-x">paper</a>
+                    </p>
+                    <p class="pub-desc">
+                      We introduce <strong>SLM-MATRIX</strong>, a multi-agent framework combining
+                      MoA collaboration, MCTS-enhanced generator-discriminator reasoning, and dual
+                      cross-verification for structured data extraction from materials-science
+                      literature. It achieves 92.85% accuracy on BulkModulus and 77.68% on
+                      MatSynTriplet without model fine-tuning.
                     </p>
                   </td>
                 </tr>
@@ -332,20 +263,24 @@
                   </td>
                   <td class="pub-text-col">
                     <p class="pub-title">
-                      Spatiotemporal Variations and Driving Factors of Atmospheric Environment in Central China
+                      <a href="https://www.mdpi.com/2073-4433/14/1/92">Analysis of the PM2.5-O3 Pollution Characteristics and Its Potential Sources in Major Cities in the Central Plains Urban Agglomeration from 2014 to 2020</a>
                     </p>
                     <p class="pub-authors">
-                      <strong>Author role:</strong> First author
+                      <strong>Shu Quan</strong>, Miaohan Liu, Boxuan Chen, Yuehua Huang,
+                      Meijuan Wang, Qingxia Ma, Yan Han
                     </p>
                     <p class="pub-venue">
-                      <em>Atmosphere</em> &nbsp;(SCI, 2023, 14(1):92) &nbsp;·&nbsp;
+                      <em>Atmosphere</em>, 2023, 14(1):92 &nbsp;·&nbsp; SCI &nbsp;·&nbsp; First author
+                    </p>
+                    <p class="pub-links">
                       <a href="https://www.mdpi.com/2073-4433/14/1/92">paper</a>
                     </p>
                     <p class="pub-desc">
-                      First-author work on atmospheric environmental modeling using multi-source
-                      remote-sensing and statistical methods over central China. Foundational
-                      training in real-world scientific-data analysis that informs my current
-                      work on grounding LLM and world-model evaluations in domain priors.
+                      First-author study of PM2.5-O3 compound pollution in seven major cities of
+                      the Central Plains Urban Agglomeration from 2014 to 2020. We analyze
+                      spatiotemporal pollution patterns, meteorological drivers, and potential
+                      source transport, providing evidence for coordinated PM2.5-O3 pollution
+                      control.
                     </p>
                   </td>
                 </tr>
@@ -364,20 +299,20 @@
                       Nonlinear Effects of Blue-Green Space Variables on Urban Cold Islands in Zhengzhou Analyzed with Random Forest Regression
                     </p>
                     <p class="pub-authors">
-                      <strong>Author role:</strong> Co-first author (listed first)
+                      <strong>Shu Quan*</strong>, Maojuan Li*, Tianqi Li, Haodong Liu, Yaohui Cui, Miaohan Liu
                     </p>
                     <p class="pub-venue">
-                      <em>Frontiers in Ecology and Evolution</em> &nbsp;(SCI Q2, Aug 2023)
-                    </p>
-                    <p class="pub-desc">
-                      Random-forest analysis of nonlinear relationships between blue-green space
-                      configuration and urban cold-island effects in Zhengzhou. Identifies blue
-                      space proportion, area, and vegetation cover as primary drivers of land
-                      surface temperature, with threshold effects at 140 m park width and 56%
-                      vegetation coverage — design thresholds for urban-planning decisions.
+                      <em>Frontiers in Ecology and Evolution</em>, 2023 &nbsp;·&nbsp; SCI Q2 &nbsp;·&nbsp; Co-first author (listed first)
                     </p>
                     <p class="pub-links">
                       <a href="https://doi.org/10.3389/fevo.2023.1185249">paper</a>
+                    </p>
+                    <p class="pub-desc">
+                      We model nonlinear relationships between blue-green space configuration and
+                      urban cold-island effects using random forest regression, identifying
+                      blue-space proportion, area, and vegetation cover as key drivers, including
+                      planning-relevant thresholds around 140 m park width and 56% vegetation
+                      coverage.
                     </p>
                   </td>
                 </tr>
@@ -431,14 +366,6 @@
                 </td>
               </tr>
             </table>
-
-            <p style="margin-top:0.8em; color:#555; font-size:0.92em;">
-              <strong>Engineering background.</strong> Prior to research, I worked as a frontend
-              engineer at <strong>YY</strong>, which gives me production-side instincts for
-              system design and human–computer interaction failure modes — visible in how I
-              approach OS-level agent observability, long-report UX failures, and clinical
-              tool-orchestration.
-            </p>
           </section>
 
           <!-- ===== EDUCATION ===== -->
