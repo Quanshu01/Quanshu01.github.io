@@ -36,7 +36,7 @@
                     LLM/agent evaluation and safety, medical AI, and AI for Science. I study
                     <strong>evaluation blind spots</strong>: how to turn hidden risks into observable
                     evidence in real-world systems. Recent projects span biosecurity, CLI-agent safety,
-                    scientific-literature extraction, and layer-wise interpretability probes for video VAEs in world models.
+                    medical knowledge updating, scientific-literature extraction, and layer-wise interpretability probes for video VAEs in world models.
                   </p>
                   <p>
                     I am actively seeking <strong>PhD</strong> opportunities for <strong>Fall 2027</strong>,
@@ -62,20 +62,20 @@
             <h2>News</h2>
             <table class="news-table">
               <tr>
-                <td class="news-date">May 2026</td>
-                <td>Preprint on medical knowledge updating (SEER-Bench) is under review.</td>
+                <td class="news-date">Apr 2026</td>
+                <td>Paper on LLM biosafety evaluation (SPIKE-Bench) is under review.</td>
               </tr>
               <tr>
                 <td class="news-date">May 2026</td>
                 <td>Paper on CLI agent safety (OS-Monitor / SafeCLI) is under review.</td>
               </tr>
               <tr>
-                <td class="news-date">Apr 2026</td>
-                <td>Joined Alibaba Health as a research intern on tool-use evaluation for medical LLM agents.</td>
+                <td class="news-date">May 2026</td>
+                <td>Preprint on medical knowledge updating (SEER-Bench) is under review.</td>
               </tr>
               <tr>
                 <td class="news-date">Apr 2026</td>
-                <td>Paper on LLM biosafety evaluation (SPIKE-Bench) is under review.</td>
+                <td>Joined Alibaba Health as a research intern on tool-use evaluation for medical LLM agents.</td>
               </tr>
               <tr>
                 <td class="news-date">Mar 2026</td>
@@ -115,46 +115,8 @@
               guide supervision or safer deployment.
             </p>
 
-            <!-- ===== Thread 1: Domain-grounded medical and scientific evaluation ===== -->
-            <h3 style="margin-top:1.2em;">Domain-grounded medical &amp; scientific evaluation</h3>
-
-            <!-- SEER-Bench -->
-            <table class="pub-table">
-              <tbody>
-                <tr>
-                  <td class="pub-img-col">
-                    <img src="images/seer_bench.png" alt="SEER-Bench" class="pub-img"
-                         onerror="this.style.visibility='hidden'">
-                  </td>
-                  <td class="pub-text-col">
-                    <p class="pub-title">
-                      Dense Clinical Contrasts Enhance Medical Knowledge Updating in Large Language Models
-                    </p>
-                    <p class="pub-authors">
-                      Yangmin Huang*, <strong>Shu Quan*</strong>, He Geng, Xin Ye, Qianyun Du, Zhiyang He, Jiaxue Hu, Xiaodong Tao
-                    </p>
-                    <p class="pub-venue">
-                      <em>Under review, 2026</em>
-                    </p>
-                    <p class="pub-desc">
-                      Medical knowledge changes continually, leaving LLMs reliant on outdated yet
-                      clinically plausible facts. We ask not <em>can</em> a model update its
-                      medical knowledge but <em>how should the update be structured</em> as
-                      supervision so that it transfers and retains. We introduce
-                      <strong>SEER-Bench</strong>, a temporally anchored oncology-staging
-                      benchmark curated from the latest SEER Research Data release, and render
-                      the same medical update content into four supervision formats — SAQ, FITB,
-                      MSQ, and the networked many-to-many <strong>EMQ</strong>. Under a
-                      same-budget protocol, EMQ yields the strongest external transfer and
-                      retention: a Qwen3-4B trained on EMQ updates reaches 64.8% on temporally
-                      anchored staging.
-                      Diagnostic analyses link EMQ’s advantage to denser clinical-contrast
-                      signals and more economical representational change.
-                    </p>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+            <!-- ===== Thread 1: LLM safety and system observability ===== -->
+            <h3 style="margin-top:1.2em;">LLM safety &amp; system observability</h3>
 
             <!-- SPIKE-Bench -->
             <table class="pub-table">
@@ -196,9 +158,6 @@
               </tbody>
             </table>
 
-            <!-- ===== Thread 2: Agent and system observability ===== -->
-            <h3 style="margin-top:1.4em;">Agent &amp; system observability</h3>
-
             <!-- SafeCLI -->
             <table class="pub-table">
               <tbody>
@@ -234,6 +193,47 @@
                     <p class="pub-links">
                       <a href="https://anonymous.4open.science/r/SafeCLI-13DD">paper</a> &nbsp;/&nbsp;
                       <a href="https://anonymous.4open.science/r/SafeCLI-13DD">code</a>
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- ===== Thread 2: Domain-grounded medical evaluation ===== -->
+            <h3 style="margin-top:1.4em;">Domain-grounded medical evaluation</h3>
+
+            <!-- SEER-Bench -->
+            <table class="pub-table">
+              <tbody>
+                <tr>
+                  <td class="pub-img-col">
+                    <img src="images/seer_bench.png" alt="SEER-Bench" class="pub-img"
+                         onerror="this.style.visibility='hidden'">
+                  </td>
+                  <td class="pub-text-col">
+                    <p class="pub-title">
+                      Dense Clinical Contrasts Enhance Medical Knowledge Updating in Large Language Models
+                    </p>
+                    <p class="pub-authors">
+                      Yangmin Huang*, <strong>Shu Quan*</strong>, He Geng, Xin Ye, Qianyun Du, Zhiyang He, Jiaxue Hu, Xiaodong Tao
+                    </p>
+                    <p class="pub-venue">
+                      <em>Under review, 2026</em>
+                    </p>
+                    <p class="pub-desc">
+                      Medical knowledge changes continually, leaving LLMs reliant on outdated yet
+                      clinically plausible facts. We ask not <em>can</em> a model update its
+                      medical knowledge but <em>how should the update be structured</em> as
+                      supervision so that it transfers and retains. We introduce
+                      <strong>SEER-Bench</strong>, a temporally anchored oncology-staging
+                      benchmark curated from the latest SEER Research Data release, and render
+                      the same medical update content into four supervision formats — SAQ, FITB,
+                      MSQ, and the networked many-to-many <strong>EMQ</strong>. Under a
+                      same-budget protocol, EMQ yields the strongest external transfer and
+                      retention: a Qwen3-4B trained on EMQ updates reaches 64.8% on temporally
+                      anchored staging.
+                      Diagnostic analyses link EMQ’s advantage to denser clinical-contrast
+                      signals and more economical representational change.
                     </p>
                   </td>
                 </tr>
